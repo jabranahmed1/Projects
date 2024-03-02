@@ -1,0 +1,64 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<!-- Main Content -->
+<div id="content">
+    <!-- Profile Content Goes Here -->
+    <div class="container-fluid">
+
+        <!-- Page Heading -->
+        <h1 class="h3 mb-4 text-gray-800">Profile</h1>
+
+        <!-- Profile Information -->
+        <div class="row">
+            <div class="col-lg-6">
+                <div class="card shadow mb-4">
+                    <div class="card-body">
+                        <!-- Profile Picture -->
+                        <div class="text-center">
+                            <img class="img-fluid rounded-circle mb-3" src="path/to/profile_picture.jpg"
+                                alt="Profile Picture">
+                        </div>
+                        <!-- User Information -->
+                        <h4 class="font-weight-bold">John Doe</h4>
+                        <p>Email: john.doe@example.com</p>
+                        <p>Date of Birth: January 1, 1990</p>
+                        <p>Location: New York, USA</p>
+                        <p>Occupation: Web Developer</p>
+                        <p>Interests: Coding, Reading, Traveling</p>
+                        <!-- Edit Profile Button -->
+                        <a href="path/to/edit_profile" class="btn btn-primary">Edit Profile</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="card shadow mb-4">
+                    <div class="card-body">
+                        <!-- Additional Profile Details -->
+                        <h4 class="font-weight-bold mb-4">Additional Details</h4>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <h5 class="font-weight-bold">Education</h5>
+                                <ul>
+                                    <li>Bachelor's Degree in Computer Science</li>
+                                    <li>Master's Degree in Software Engineering</li>
+                                </ul>
+                            </div>
+                            <div class="col-md-6">
+                                <h5 class="font-weight-bold">Experience</h5>
+                                <ul>
+                                    <li>3 years as a Web Developer</li>
+                                    <li>2 years as a Frontend Engineer</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+<!-- End of Main Content -->
+
+{% endblock content %}
