@@ -9,9 +9,11 @@ import io
 from reportlab.pdfgen import canvas
 from reportlab.lib.units import inch
 from reportlab.lib.pagesizes import letter
+from django.contrib.auth.decorators import login_required
 
 
 # Create your views here.
+@login_required(login_url="/accounts/login")
 def index(request):
     labels=[]
     data=[]

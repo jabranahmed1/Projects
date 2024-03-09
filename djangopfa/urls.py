@@ -20,8 +20,8 @@ from dashboard import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', views.index),
-    path('report/', views.report),
-    path('search', views.search),
+    path('', views.index, name='index'),
+    path('report/', views.report, name='report'),
+    path('search', views.search, name='search'),
     path('accounts/', include('accounts.urls')),
 ]

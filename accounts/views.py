@@ -1,6 +1,8 @@
+from django.http import HttpResponseRedirect
 from django.shortcuts import render, redirect
 from django.contrib import messages
 from django.contrib.auth.models import User, auth
+from django.contrib.auth.decorators import login_required
 
 # Create your views here.
 def register(request):
@@ -41,15 +43,15 @@ def login(request):
 
         if user is not None:
             auth.login(request, user)
-            return redirect('/')
+            # return redirect('/')
+            next_url = request.GET.get('next', '/')
+            return HttpResponseRedirect(next_url)
         else:
             if not User.objects.filter(username=username).exists():
                 messages.error(request, 'User not found.')
             else:
                 messages.error(request, 'Incorrect password.')
             return redirect('login')
-        
-        
     else: 
         return render(request, 'login.html')
 
@@ -60,5 +62,6 @@ def logout(request):
 def forgotpassword(request):
     return render(request, 'forgot-password.html')
 
+@login_required(login_url="/accounts/login")
 def profile(request):
     return render(request, 'profile.html')
