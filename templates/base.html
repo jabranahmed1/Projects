@@ -8,7 +8,8 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-  <title>Weather Application</title>
+  <title>WeatherApp</title>
+  <link rel="icon" href="{% static 'img/weather.png' %}" type="image/png">
 
   <!-- Custom fonts for this template-->
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" rel="stylesheet" type="text/css">
@@ -30,9 +31,11 @@
       <!-- Sidebar - Brand -->
       <a class="sidebar-brand d-flex align-items-center justify-content-center" href="#">
         <div class="sidebar-brand-icon rotate-n-15">
-            <i class="fas fa-address-card"></i>
+            {% comment %} <i class="fas fa-address-card"></i> {% endcomment %}
+            <i class="fas fa-cloud"></i> <!-- Cloud icon for cloudy weather -->
+
         </div>
-        <div class="sidebar-brand-text mx-3">Weather <sup>Application</sup></div>
+        <div class="sidebar-brand-text mx-3">WeatherApp</div>
       </a>
 
       <!-- Divider -->
